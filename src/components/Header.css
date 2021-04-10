@@ -1,0 +1,26 @@
+body{
+    font-family:'Roboto', sans-serif;
+}
+
+.title_header{
+    margin: 0 auto;
+    font-size: 1.3rem;
+
+}
+.header_container{
+   display: flex;
+   background-image: linear-gradient(to right top, #12d1de, #00d5d7, #00d9ce, #1fddc3, #3ae0b7);
+   
+  
+}
+.logo{
+    display: flex;
+    align-self: flex-start;
+    
+}
+
+.logo img{
+    width: 4.5rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}

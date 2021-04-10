@@ -1,0 +1,36 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container_input{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+
+    
+}
+.label_title{
+    padding-right: 1rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+}
+
+.label_localisation, .label_offer, .date{
+    padding-left: 1rem;
+    line-height: 3rem;
+}
+
+
+.button {
+    background-image: linear-gradient(to right top, #12d1de, #00d5d7, #00d9ce, #1fddc3, #3ae0b7);; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .container_button{
+      padding-left: 1rem;
+  }

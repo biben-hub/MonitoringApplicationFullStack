@@ -1,0 +1,55 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    display:flex;
+    justify-content:space-evenly;
+    padding:20px;
+    gap:4px;
+  }
+
+.box{
+    display:flex;
+    justify-content:center; 
+    border-radius:2%;
+    margin:8px;
+    width:600px;
+    height:300px;
+  }
+
+  .profile{
+    display:flex;
+    align-items:center;
+  }
+  .pic{
+    display:flex;
+    justify-content:center;
+    width:75px;
+    height:75px;
+    border: 2px solid white;
+    border-radius:100%;
+    overflow:hidden;
+    transition: border 2s;
+  }
+  .pic:hover {
+     border: 3px solid aquamarine;
+  }
+  .content{
+    display:flex;
+    align-items:center;
+    padding:6px;
+    font-weight:lighter;
+  }
+  .yellow{
+    background-color: lightskyblue;
+  }
+  .pink{
+    background-color: lightskyblue;
+  }
+  .aqua{
+    background-color: lightskyblue;
+  }
+
+  .card_title{
+      font-size: 3rem;
+  }
