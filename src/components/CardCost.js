@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import './CardCost.css'
 
-const fetchURL = "http://localhost:4000/users";
+const fetchURL = "http://localhost:4000/monitoring";
 //https://api.github.com/users/deekshasharma
 
 export default function CardCost() {
@@ -26,31 +26,8 @@ export default function CardCost() {
         </div>
         <div className="content">
             <div>
-                <p className="card_title">Cost</p>
-                <p>{userData[0].name}</p> 
-            </div>
-          </div>
-      </div>
-      <div className="box pink">
-      <div className="profile">
-          <div className="pic"><img src="https://picsum.photos/200" alt=""/></div>
-        </div>
-        <div className="content">
-            <div>
-              <p className="card_title">Quantity</p>
-              <p>Title</p>
-            </div>
-            
-          </div>
-    </div> 
-      <div className="box aqua">
-      <div className="profile">
-          <div className="pic"><img src="https://picsum.photos/200" alt=""/></div>
-        </div>
-        <div className="content">
-            <div>
-              <p className="card_title">Consommation</p>
-              <p>Title</p>
+                <p className="card_title">Total Cost</p>
+                {userData.length > 0 && (<p className="card_cost">{userData[0].sum}</p>)}
             </div>
           </div>
         

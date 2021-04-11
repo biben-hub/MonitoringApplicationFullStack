@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/Header'
 import Input from './components/Input'
 import CardCost from './components/CardCost'
+import CardCostSchool from './components/CardCostSchool'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header/>
       <Input/>
       <CardCost/>
+      <CardCostSchool/>
     </div>
   );
 }
