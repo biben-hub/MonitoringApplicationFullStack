@@ -2,18 +2,22 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import './CardCost.css'
 
-export default function CardCost() {
-    const [nom, setData] = useState('');
+const fetchURL = "http://localhost:4000/users";
+//https://api.github.com/users/deekshasharma
 
-    const fetchMyAPI = async () => {
-      let json = await axios(`http://localhost:4000/users`)
-      setData(json.nom);
-      
-    }
-    useEffect(() => {
-        fetchMyAPI();
-        console.log(fetchMyAPI());
-       }, []);
+export default function CardCost() {
+  const [userData, setUserData] = useState({});
+
+  useEffect(() => {
+    getDataFetch();
+  }, []);
+  
+  const getDataFetch = async () => {
+    const response = await axios.get(fetchURL);
+    setUserData(response.data);
+    console.log(response.data);
+  };
+
     return (
         <div className="container">
             <div className="box yellow">
@@ -23,7 +27,7 @@ export default function CardCost() {
         <div className="content">
             <div>
                 <p className="card_title">Cost</p>
-                <p>{nom}</p> 
+                <p>{userData[0].name}</p> 
             </div>
           </div>
       </div>
