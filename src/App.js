@@ -9,8 +9,10 @@ function App() {
     <div className="App">
       <Header/>
       <Input/>
+      <div className="block_card1">
       <CardCost/>
       <CardCostSchool/>
+      </div>
     </div>
   );
 }

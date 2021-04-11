@@ -25,20 +25,20 @@ export default function CardCost() {
                     <div className="pic"><img src="https://picsum.photos/200" alt="cost" /></div>
                 </div>
                 <div className="content">
-                    <div>
+                    <div className="block-li">
                         <p className="card_title">Cost Per School</p>
-                        {userData.length > 0 && (<p className="card_cost">{userData[0].sum}</p>)}
-                    </div>
+
                     <ul>
                         {
                             userData.map(r => (
-                                <li key={r.subscriptionname}>{r.subscriptionname} : {r.cost}</li>
+                                <li className="list_sub" key={r.subscriptionname}>{r.subscriptionname} : {r.cost} </li>
                             ))
                         }
                     </ul>
+                    </div>
                 </div>
             </div>
-            
-            </div>
+
+        </div>
     )
 }

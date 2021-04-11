@@ -14,7 +14,8 @@ body{
     border-radius:2%;
     margin:8px;
     width:600px;
-    height:300px;
+    height:320px;
+    padding-bottom: 1rem;
   }
 
   .profile{
@@ -39,6 +40,7 @@ body{
     align-items:center;
     padding:6px;
     font-weight:lighter;
+    
   }
   .yellow{
     background-color: lightskyblue;
@@ -50,11 +52,19 @@ body{
     background-color: lightskyblue;
   }
 
-  .card_title{
-      font-size: 3rem;
+
+  .list_sub{
+    font-size: 1.2rem;
+    color:darkred;
+    text-align: left;
+    list-style-type: none;
+    
   }
 
-  .card_cost{
-    font-size: 2rem;
-    color:darkred;
+  .list_sub ul li {
+      font-weight: bold;
+  }
+
+  .block-li ul li{
+      font-weight: bold;
   }
