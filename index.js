@@ -38,7 +38,7 @@ const pool = new Pool({
 
 
 app.get('/costperschool',(request, response) => {
-    pool.query('SELECT subscriptionname, cost FROM azure4;', (error, results) => {
+    pool.query('SELECT subscriptionname, cost FROM azure4 limit 10;', (error, results) => {
       if (error) {
         throw error
       }
