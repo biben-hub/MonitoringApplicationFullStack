@@ -37,8 +37,8 @@ const pool = new Pool({
   })
 
 
-app.get('/users',(request, response) => {
-    pool.query('SELECT * FROM users', (error, results) => {
+app.get('/costperschool',(request, response) => {
+    pool.query('SELECT subscriptionname, cost FROM azure4;', (error, results) => {
       if (error) {
         throw error
       }
@@ -46,9 +46,16 @@ app.get('/users',(request, response) => {
     })
   })
 
-app.get('/connection', (request,response) => {
-    pool.query()
-})
+
+
+app.get('/monitoring', (request,response) => {
+    pool.query('SELECT SUM(cost) FROM azure4;', (error,results) => {
+      if (error) {
+        throw error
+      }
+      response.status(200).json(results.rows)
+    })
+  })
 
 app.get('/', (request, response) => {
     response.json({ info: 'Node.js, Express, and Postgres API' })
