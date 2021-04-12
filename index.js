@@ -48,7 +48,7 @@ app.get('/costperschool',(request, response) => {
 
   
 app.get('/costbyschool',(request, response) => {
-    pool.query('SELECT subscriptionname,SUM(cost) FROM azure7 GROUP BY subscriptionname;', (error, results) => {
+    pool.query('SELECT subscriptionname,SUM(cost) FROM azure7 GROUP BY subscriptionname ;', (error, results) => {
       if (error) {
         throw error
       }
@@ -66,10 +66,16 @@ app.get('/monitoring', (request,response) => {
     })
   })
 
-app.get('/', (request, response) => {
-    response.json({ info: 'Node.js, Express, and Postgres API' })
-  })
 
+
+app.get('/servicequantity',(request, response) => {
+    pool.query('SELECT servicename, SUM(cost) FROM azure7 GROUP BY servicename ORDER BY servicename ASC LIMIT 10;', (error, results) => {
+      if (error) {
+        throw error
+      }
+      response.status(200).json(results.rows)
+    })
+  })
 
 
   
