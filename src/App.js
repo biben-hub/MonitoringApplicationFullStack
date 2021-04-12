@@ -9,15 +9,15 @@ import Card from './components/Card'
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Input/>
+      <Header />
+      <Input />
       <div className="block_card1">
-      <CardCost/>
-      <CardCostSchool/>
+        <CardCost />
+        <CardCostSchool />
       </div>
       <div className="block_card1">
-        <CardBySchool/>
-      <Card/>
+        <CardBySchool />
+        <Card />
       </div>
     </div>
   );

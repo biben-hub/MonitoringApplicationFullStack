@@ -27,13 +27,13 @@ export default function CardCost() {
                 <div className="content">
                     <div className="block-li">
                         <p className="card_title">Amount Per School</p>
-                    <ul>
-                        {
-                            userData.map(r => (
-                                <li className="list_sub" key={r.subscriptionname}>{r.subscriptionname} : {Math.ceil(r.sum)}</li>
-                            ))
-                        }
-                    </ul>
+                        <ul>
+                            {
+                                userData.map(r => (
+                                    <li className="list_sub" key={r.subscriptionname}>{r.subscriptionname} : {Math.ceil(r.sum)}</li>
+                                ))
+                            }
+                        </ul>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './CardCostSchool.css'
 
-const fetchURL = "http://localhost:4000/costperschool";
+const fetchURL = "http://localhost:4000/servicequantity";
 //https://api.github.com/users/deekshasharma
 
 export default function CardCost() {
@@ -26,14 +26,15 @@ export default function CardCost() {
                 </div>
                 <div className="content">
                     <div className="block-li">
-                        <p className="card_title">Amount Per School</p>
-                    <ul>
-                        {
-                            userData.map(r => (
-                                <li className="list_sub" key={r.subscriptionname}>{r.subscriptionname} : {Math.ceil(r.sum)}</li>
-                            ))
-                        }
-                    </ul>
+                        <p className="card_title">Most used services</p>
+
+                        <ul>
+                            {
+                                userData.map(r => (
+                                    <li className="list_sub" key={r.subscriptionname}>{r.subscriptionname}  {r.servicename}</li>
+                                ))
+                            }
+                        </ul>
                     </div>
                 </div>
             </div>
