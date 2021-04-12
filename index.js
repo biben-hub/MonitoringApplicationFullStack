@@ -38,7 +38,17 @@ const pool = new Pool({
 
 
 app.get('/costperschool',(request, response) => {
-    pool.query('SELECT subscriptionname, cost FROM azure4 limit 10;', (error, results) => {
+    pool.query('SELECT subscriptionname, SUM(quantity) FROM azure7 GROUP BY subscriptionname;', (error, results) => {
+      if (error) {
+        throw error
+      }
+      response.status(200).json(results.rows)
+    })
+  })
+
+  
+app.get('/costbyschool',(request, response) => {
+    pool.query('SELECT subscriptionname,SUM(cost) FROM azure7 GROUP BY subscriptionname;', (error, results) => {
       if (error) {
         throw error
       }
@@ -47,9 +57,8 @@ app.get('/costperschool',(request, response) => {
   })
 
 
-
 app.get('/monitoring', (request,response) => {
-    pool.query('SELECT SUM(cost) FROM azure4;', (error,results) => {
+    pool.query('SELECT SUM(cost) FROM azure7;', (error,results) => {
       if (error) {
         throw error
       }
