@@ -52,10 +52,11 @@ body{
 
   .card_title{
       font-size: 2rem;
+      font-weight: bold;
   }
 
   .card_cost{
     font-size: 2rem;
-    color:darkred;
+    color: black;
     font-weight: bold;
   }
