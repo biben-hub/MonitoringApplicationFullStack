@@ -26,7 +26,7 @@ export default function CardCost() {
         <div className="content">
           <div>
             <p className="card_title">Total Cost</p>
-            {userData.length > 0 && (<p className="card_cost">{Math.ceil(userData[0].sum)} €</p>)}
+            {userData.length > 0 && (<p key={userData.sum} className="card_cost">{Math.ceil(userData[0].sum)} €</p>)}
           </div>
         </div>
 
