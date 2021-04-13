@@ -16,7 +16,6 @@ export default function CardCost() {
     setUserData(response.data);
     console.log(response.data);
   };
-
   return (
     <div className="container">
       <div className="box yellow">
