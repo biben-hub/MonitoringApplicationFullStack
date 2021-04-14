@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './CardCost.css'
 
-const fetchURL = "https://13.68.153.183:4000/monitoring";
+const fetchURL = "http://13.68.153.183:4000/monitoring";
 
 
 export default function CardCost() {
