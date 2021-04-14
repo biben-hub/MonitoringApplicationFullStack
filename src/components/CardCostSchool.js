@@ -3,7 +3,7 @@ import axios from 'axios';
 import './CardCostSchool.css'
 
 const fetchURL = "http://localhost:4000/costperschool";
-//https://api.github.com/users/deekshasharma
+
 
 export default function CardCost() {
     const [userData, setUserData] = useState([]);
