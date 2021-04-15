@@ -3,6 +3,7 @@ import axios from 'axios';
 import './CardCost.css'
 
 const fetchURL = "https://13.68.153.183:4000/monitoring";
+//https://13.68.153.183:4000/monitoring
 
 
 export default function CardCost() {

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './CardCostSchool.css'
 
-const fetchURL = "https://13.68.153.183:4000/servicequantity";
 
+const fetchURL = "https://13.68.153.183:4000/servicequantity";
 
 export default function CardCost() {
     const [userData, setUserData] = useState([]);

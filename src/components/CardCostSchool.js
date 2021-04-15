@@ -11,13 +11,11 @@ export default function CardCost() {
     useEffect(() => {
         getDataFetch();
     }, []);
-
     const getDataFetch = async () => {
         const response = await axios.get(fetchURL);
         setUserData(response.data);
         console.log(response.data);
     };
-
     return (
         <div className="container">
             <div className="box yellow">
